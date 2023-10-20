@@ -20,7 +20,7 @@
 
 <body>
   <div class="container flex">
-    <div class="text-container">
+    <div class="text-container flex column">
       <h1>
         Learn to code by watching others
       </h1>
@@ -29,40 +29,53 @@
         but understanding how developers think is invaluable.
       </p>
     </div>
-    <div class="signup-container">
-      <p class="trial-container"><span>Try it free 7 days</span>then $20/mo. thereafter</p>
-      <fieldset>
-        <div class="input-container">
-          <input type="text" id="firstNameInput" placeholder="First Name">
+    <div class="signup-container flex column">
+      <p class="trial-container" id="trialContainer"><span>Try it free 7 days </span>then $20/mo. thereafter</p>
+      <div class="input-container flex column">
+        <div class="input-box">
+          <div class="icon-input">
+            <input type="text" id="firstNameInput" placeholder="First Name" required>
+            <img src="./images/icon-error.svg" alt="" class="errorIcon" id="errorIconFirstName">
+          </div>
+          <p class="errorMessage" id="errorFirstName">First Name cannot be empty</p>
         </div>
-        <div class="input-container">
-          <input type="text" id="lastNameInput" placeholder="Last Name">
+        <div class="input-box">
+          <div class="icon-input">
+            <input type="text" id="lastNameInput" placeholder="Last Name" required>
+            <img src="./images/icon-error.svg" alt="" class="errorIcon" id="errorIconLastName">
+          </div>
+          <p class="errorMessage" id="errorLastName">Last Name cannot be empty</p>
+        </div>
+        <div class="input-box">
+          <div class="icon-input">
 
+            <input type="text" id="emailInput" placeholder="Email Adress" required>
+            <img src="./images/icon-error.svg" alt="" class="errorIcon" id="errorIconEmail">
+          </div>
+          <p class="errorMessage" id="errorEmail">Looks like this is not an email</p>
         </div>
-        <div class="input-container">
+        <div class="input-box">
+          <div class="icon-input">
 
-          <input type="text" id="emailInput" placeholder="Email Adress">
+            <input type="password" id="passwordInput" placeholder="Password" required>
+            <img src="./images/icon-error.svg" alt="" class="errorIcon" id="errorIconPassword">
+          </div>
+          <p class="errorMessage" id="errorPassword">Password cannot be empty</p>
         </div>
-        <div class="input-container">
 
-          <input type="text" id="passwordInput" placeholder="password">
-        </div>
-        
         <button type="submit" for="fieldset" id="submitButton">claim your free trial</button>
-        <p class="terms">By clicking the button, you are agreeing to our <span>Terms and Services</span></p>
-      </fieldset>
+        <p id="terms">By clicking the button, you are agreeing to our <span>Terms and Services</span></p>
+
+        
+        <h1 id="success">You have successfully subscribed 🎉</h1>
+        
+      </div>
+     
     </div>
+ 
   </div>
 
-
-
-
-
- 
-
-  Claim your free trial
-
-
+<script src="index.js" type="module"></script>
 </body>
 
 </html>
